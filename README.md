@@ -35,3 +35,4 @@ Retrieves last dwRefData value in pdwRefData. uIdSubclassA and pfnSubclassA desc
 
 # LRESULT Goschie_DefSubclassProcA(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 Calls the next window procedure in the call chain. Typically use this to return from SUBCLASSPROC functions. 
+- This should automatically handle deleting the thunk that heads the call chain before calling the original window procedure if msg is WM_NCDESTROY, the final window message before destruction
